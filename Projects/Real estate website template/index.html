@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="navbar-container">
+          <!-- 1. Logo -->
+          <div class="logo">
+            <img src="assets/logo.png" alt="Logo" />
+          </div>
+      
+          <!-- 2. Nav Links -->
+          <nav class="nav-links">
+            <a href="#home"><ion-icon name="home-outline"></ion-icon>Home</a>
+            <a href="#amenities"><ion-icon name="wifi-outline"></ion-icon>Amenities</a>
+            <a href="#gallery"><ion-icon name="images-outline"></ion-icon>Gallery</a>
+            <a href="#location"><ion-icon name="location-outline"></ion-icon>Location</a>
+            <a href="#virtual-tour"><ion-icon name="videocam-outline"></ion-icon>Virtual Tour</a>
+            <a href=""><ion-icon name="download-outline"></ion-icon>Brochure</a>
+          </nav>
+      
+          <!-- 3. Buttons -->
+          <div class="nav-buttons">
+            <button class="visit-btn">Organise a Site Visit</button>
+            <a href="https://wa.me/911234567890" target="_blank" class="icon-btn">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <a href="tel:+911234567890" class="icon-btn">
+              <ion-icon name="call-outline"></ion-icon>
+            </a>
+          </div>
+      
+          <!-- Hamburger for mobile -->
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      
+        <!-- Responsive Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <!-- You can copy nav-links + buttons here for mobile -->
+        </div>
+      </header>
+      
+
+
+    <!-- Sticky Form Container -->
+<div class="sticky-form" id="leadForm">
+    <div class="form-header">
+      <span>Pre-Register for Best Offers</span>
+      <button id="toggleFormBtn">×</button>
+    </div>
+  
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="tel" placeholder="Mobile No" required />
+      <input type="email" placeholder="E-Mail Address" required />
+  
+      <div class="captcha-placeholder">[reCAPTCHA here]</div>
+  
+      <button type="submit" class="submit-btn">Pre-Register Now</button>
+  
+      <p class="consent-text">
+        I authorize company representatives to Call, SMS, Email or WhatsApp me about its products and offers.
+      </p>
+    </form>
+
+      <!-- Add this just before closing </div> of .sticky-form -->
+        <div class="form-icons">
+            <a href="tel:+911234567890" title="Call">
+              <ion-icon name="call-outline"></ion-icon>
+            </a>
+            <a href="https://wa.me/911234567890" target="_blank" title="WhatsApp">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <a href="https://maps.google.com?q=your+location" target="_blank" title="Location">
+              <ion-icon name="location-outline"></ion-icon>
+            </a>
+            <a href="your-brochure.pdf" download title="Download Brochure">
+              <ion-icon name="cloud-download-outline"></ion-icon>
+            </a>
+          </div>
+
+  </div>
+  
+  <!-- Toggle Button (when hidden) -->
+  <button id="showFormBtn" class="show-form-btn"><ion-icon name="chevron-back-outline"></ion-icon>Connect Us</button>
+  
+
+  <!-- Hero section -->
+  <section class="hero-slider" id="home">
+
+    <div class="hero-info-box">
+        <h2>Booking Open</h2>
+        <h1>M3M THE LINE</h1>
+        <p><ion-icon name="location-outline"></ion-icon> Sector 72, Central Noida.</p>
+        <h3>Lower Ground Floor – Hypermarket / Pentsuites</h3>
+        <p>Sizes: 209 sqft Onwards</p>
+        <p>Pay Remaining 50% 2 years after Possession</p>
+        <p>Day 1 lease Guarantee of 12.5% From the day of possession</p>
+        <p><strong>INVESTMENT STARTS AT 90 LACS (Ninety Lakhs)</strong></p>
+      
+        <div class="usp-box">
+          <div>
+              <h4>USP’s of M3M The Line</h4>
+              <ul>
+                  <li>✓ Under construction</li>
+                  <li>✓ AVAILABLE WITH BEST PRICE</li>
+                  <li>✓ Possession: 2.5 years</li>
+                  <li>✓ PAYMENT PLAN: 24:76</li>
+                </ul>
+            </div>
+        </div>
+      
+        <div class="offers-box">
+          <h4>Offers</h4>
+          <p>Pay 50% Now And Get Assured Returns Of 12% From Day 1</p>
+          <p><strong>Gold Coin &nbsp;&nbsp; Iphone 16 &nbsp;&nbsp; Iphone 16 Pro</strong></p>
+        </div>
+      </div>
+
+      
+
+    <div class="slides">
+      <img src="assets/banner1.webp" class="slide active" alt="Slide 1">
+      <img src="assets/banner2.webp" class="slide" alt="Slide 2">
+      <img src="assets/banner3.webp" class="slide" alt="Slide 3">
+    </div>
+
+    <div class="slider-nav">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
+    
+    <div class="pagination-dots" id="paginationDots"></div>
+
+    <button class="explore-more"><a href="#overview">Scroll To Explore</a></button>
+  </section>
+
+  
+  <!-- Overview Section -->
+
+  <section id="overview" class="overview-section">
+    <h2 class="section-title">Overview</h2>
+    <div class="overview-content">
+      <h2>M3M The Line</h2>
+      <h4>At Sector 72, Noida.</h4>
+      <p>
+        In Sector 72, Noida, M3M The Line is the apex of commercial growth. This project, which is
+        positioned as a top business destination, offers the perfect environment for success by fusing
+        a premium location with modern infrastructure. M3M The Line, with its modern facilities and
+        streamlined design, meets the many demands of contemporary businesses. This commercial project,
+        which is well situated in Sector 72, Noida, has easy access for clients, guests, and staff due
+        to its close proximity to main roads, highways, and public transportation systems. Its allure
+        as a premier business destination is further enhanced by its proximity to residential districts,
+        commercial hubs, and urban amenities. M3M The Line offers large office spaces, retail stores,
+        and commercial units that are geared to fulfill the needs of a vibrant community, all with the
+        aim of inspiring creativity and productivity. With its modern architecture, efficient layout,
+        and premium amenities, this project creates a conducive atmosphere for growth and innovation.
+      </p>
+      <a href="brochure.pdf" download class="brochure-btn">
+        <ion-icon name="download-outline"></ion-icon> Download Brochure
+      </a>
+    </div>
+    <!-- <div class="vertical-title">Overview</div> -->
+  </section>
+  
+
+  <!-- Ameneties Section -->
+  <section id="amenities" class="amenities-section">
+    <h2 class="amenities-heading">Amenities</h2>
+    <div class="amenities-container">
+      <div class="amenity-box">
+        <img src="assets/security.png" alt="Security" />
+        <p>24 x 7 Security</p>
+      </div>
+      <div class="amenity-box">
+        <img src="assets/wifi.png" alt="Wi-Fi" />
+        <p>Wi-Fi</p>
+      </div>
+      <div class="amenity-box">
+        <img src="assets/elevator.png" alt="Lift" />
+        <p>Lift</p>
+      </div>
+      <div class="amenity-box">
+        <img src="assets/reception.png" alt="Reception" />
+        <p>Reception</p>
+      </div>
+      <div class="amenity-box">
+        <img src="assets/cctv.png" alt="CCTV" />
+        <p>CCTV</p>
+      </div>
+      <div class="amenity-box">
+        <img src="assets/parking.png" alt="Car Parking" />
+        <p>Car Parking</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- galary section -->
+  <section id="gallery" class="gallery-section">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <img src="assets/banner1.webp" alt="Gallery Image" class="gallery-img" />
+      <img src="assets/banner2.webp" alt="Gallery Image" class="gallery-img" />
+      <img src="assets/banner3.webp" alt="Gallery Image" class="gallery-img" />
+      <img src="assets/banner4.webp" alt="Gallery Image" class="gallery-img" />
+      <img src="assets/banner5.webp" alt="Gallery Image" class="gallery-img" />
+      <!-- Add more images as needed -->
+    </div>
+  
+    <!-- Popup -->
+    <div id="imagePopup" class="popup-overlay">
+      <span class="close-btn">&times;</span>
+      <img src="" class="popup-img" alt="Full View" />
+    </div>
+  </section>
+
+
+<!-- location section -->
+<section id="location" class="location-section">
+    <h2 class="section-title">Location</h2>
+    <div class="location-container">
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=M3M+The+Line,+Noida&output=embed"
+          loading="lazy"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="location-highlights">
+        <ul>
+          <li><ion-icon name="location-outline"></ion-icon> Superb Connectivity to Upcoming Medanta Hospital</li>
+          <li><ion-icon name="location-outline"></ion-icon> Right opposite to Metro Station sector 51</li>
+          <li><ion-icon name="location-outline"></ion-icon> Prime location unleashes proximity to the famous IKEA store</li>
+          <li><ion-icon name="location-outline"></ion-icon> Right opposite to Metro Station sector 51</li>
+          <li><ion-icon name="location-outline"></ion-icon> Prime location unleashes proximity to the famous IKEA store</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Virtual Tour Section -->
+  <section id="virtual-tour" class="virtual-tour-section">
+    <h2 class="section-title">Virtual Tour</h2>
+    <div class="video-wrapper">
+      <img src="assets/banner1.webp" alt="Virtual Site Image" class="video-thumb">
+      <div class="play-btn" onclick="openVideo()">
+        <ion-icon name="play"></ion-icon>
+      </div>
+      <p class="video-caption">At Sector 72, Noida.</p>
+    </div>
+  
+    <div class="video-popup" id="videoPopup">
+      <div class="video-overlay" onclick="closeVideo()"></div>
+      <div class="video-box">
+        <iframe id="tourVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer Section -->
+<footer class="site-footer">
+    <p>©2024 <strong>M3M THE LINE</strong></p>
+    <p>M3M THE LINE Promoted by Authorised Affiliate Channel Sales Partner.</p>
+    <p><strong>Project Rera No - UPRERAPRJ246070</strong></p>
+    <p>
+      <a href="#">Privacy Policy & Disclaimer :</a><br>
+      Any content mentioned in this website is sourced from the Developer/Builder for information purpose only and not to be considered as an official website.
+      This Website belongs to Authorised Sales Partner of M3M THE LINE and does not include M3M THE LINE Sales Team.
+      The details given here are sourced content from the builder but does not abide M3M THE LINE to this website in any manner.
+    </p>
+  </footer>
+  
+
+
+  <script src="script.js"></script>
+    
+</body>
+</html>
