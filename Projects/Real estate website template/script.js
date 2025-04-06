@@ -131,8 +131,98 @@ hamburger.addEventListener('click', () => {
     document.getElementById("videoPopup").style.display = "none";
   }
   
+  
+
+  function openPopup() {
+    document.getElementById("popupForm").style.display = "flex";
+    document.body.style.overflow = "hidden"; // Stop body scroll
+    leadForm.classList.add('hidden');
+  }
+  
+  function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+    document.body.style.overflow = "auto"; // Enable body scroll again
+  }
+  
+
+  let captchaText = ""; // Make sure captchaText is available globally
+
+  function generateCaptcha() {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+    captchaText = "";
+    for (let i = 0; i < 6; i++) {
+      captchaText += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+  
+    const canvas = document.getElementById("captchaCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    ctx.font = "24px Arial";
+    ctx.fillStyle = "#000";
+    ctx.fillText(captchaText, 10, 30);
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    generateCaptcha();
+  
+    const form = document.querySelector("form");
+    const captchaInput = document.getElementById("captchaInput");
+  
+    form.addEventListener("submit", function (e) {
+      if (captchaInput.value !== captchaText) {
+        e.preventDefault();
+        captchaInput.style.border = "2px solid red";
+      } else {
+        captchaInput.style.border = "2px solid green";
+      }
+    });
+  
+    captchaInput.addEventListener("input", () => {
+      captchaInput.style.border = "1px solid #ccc";
+    });
+  });
+  
+
+window.onload = generateCaptcha;
 
 
+let stickyCaptchaText = "";
 
+function generateStickyCaptcha() {
+  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+  stickyCaptchaText = "";
+  for (let i = 0; i < 6; i++) {
+    stickyCaptchaText += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
 
+  const canvas = document.getElementById("stickyCaptchaCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  ctx.font = "24px Arial";
+  ctx.fillStyle = "#000";
+  ctx.fillText(stickyCaptchaText, 10, 30);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  generateStickyCaptcha();
+
+  const stickyForm = document.querySelector("#leadForm form");
+  const stickyInput = document.getElementById("stickyCaptchaInput");
+
+  stickyForm.addEventListener("submit", function (e) {
+    if (stickyInput.value !== stickyCaptchaText) {
+      e.preventDefault();
+      stickyInput.style.border = "2px solid red";
+    } else {
+      stickyInput.style.border = "2px solid green";
+    }
+  });
+
+  stickyInput.addEventListener("input", () => {
+    stickyInput.style.border = "1px solid #ccc";
+  });
+});
+
+window.onload = generateStickyCaptcha;

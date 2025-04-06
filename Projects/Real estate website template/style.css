@@ -346,12 +346,243 @@ input {
     text-decoration: none;
     transition: background 0.3s ease;
   }
+
+  .form-icons a:last-child{
+    animation: bounce 1.5s infinite ease-in-out;
+  }
   
   .form-icons a:hover {
     background: #003fa6;
   }
-  
 
+  /* Overlay Styles */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  /* background: red; */
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  overflow-y: auto;
+  /* max-height: 90vh; */
+  /* margin: 10px; */
+}
+
+/* .popup {
+  background: white;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+} */
+
+
+.popup .illustration{
+  height: 100%;
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 20px;
+}
+
+.popup .illustration h2{
+  font-size: 24px;
+  /* text-align: left; */
+  color: #0056d2;
+  /* margin-bottom: 10px; */
+}
+
+.illustrate-item{
+  /* width: 40px; */
+  height: 60px;
+}
+
+.illustrate-item img{
+  width: 60px;
+  height: 100%;
+  object-fit: cover;
+  /* mix-blend-mode: color-burn; */
+  /* border-radius: 50%; */
+}
+.illustrate-item p{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 70px;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+form input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.phone-field {
+  display: flex;
+  gap: 10px;
+}
+
+.captcha-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.refresh_captcha{
+  position: relative;
+  top: -20px;
+}
+
+.captcha-box canvas {
+  background: #f0f0f0;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+}
+
+.captcha-box button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: #0056d2;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+
+.captcha-box input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+  font-size: 12px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.consent p{
+  color: #7a7a7a;
+  font-size: 11px;
+}
+
+.consent-check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  
+}
+
+.register-btn {
+  background: #0056d2;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.register-btn:hover{
+  background: #003fa6;
+}
+
+.bottom-call {
+  margin-top: 20px;
+  background: #0056d2;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.bottom-call:hover{
+  background: #003fa6;
+}
+
+@media (max-width: 488px) {
+  .popup {
+    /* width: 90%; */
+    /* padding: 20px; */
+    flex-direction: column;
+  }
+  
+  .popup .illustration{
+    display: none;
+    /* height: auto; */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .illustrate-item{
+    width: 40px;
+    height: auto;
+  }
+  
+  .illustrate-item img{
+    width: 40px;
+    height: auto;
+  }
+  .illustrate-item p{
+    font-size: 12px;
+  }
+}
 
 /* section{
     height: 100vh;
@@ -436,7 +667,7 @@ input {
     /* top: 20%; */
     top: 80px;
     /* left: 20px; */
-    max-width: 500px;
+    max-width: 450px;
     background: rgba(255, 255, 255, 0.95);
     padding: 25px;
     padding-top: 70px;
@@ -532,6 +763,8 @@ input {
   .offers-box h4 {
     color: #0055aa;
     margin-bottom: 5px;
+    font-size: 18px;
+    text-align: left;
   }
 
   .overview-section {
@@ -593,7 +826,18 @@ input {
   .brochure-btn ion-icon {
     margin-right: 8px;
     vertical-align: middle;
+    animation: bounce 1.5s infinite ease-in-out;
   }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  
   
   .vertical-title {
     writing-mode: vertical-rl;

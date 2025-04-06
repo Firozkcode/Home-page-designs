@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paras Buildtech</title>
+    <title>Paras Plots in Meerut | Paras Meerut | Paras Estate</title>
     <link rel="icon" href="assets/favicon.ico" type="image/png">
     <link rel="stylesheet" href="style.css">
 
@@ -27,12 +27,12 @@
             <a href="#gallery"><ion-icon name="images-outline"></ion-icon>Gallery</a>
             <a href="#location"><ion-icon name="location-outline"></ion-icon>Location</a>
             <a href="#virtual-tour"><ion-icon name="videocam-outline"></ion-icon>Virtual Tour</a>
-            <a href=""><ion-icon name="download-outline"></ion-icon>Brochure</a>
+            <a href="#" onclick="openPopup()"><ion-icon name="download-outline" style="animation: bounce 1.5s infinite ease-in-out;"></ion-icon>Brochure</a>
           </nav>
       
           <!-- 3. Buttons -->
           <div class="nav-buttons">
-            <button class="visit-btn">Organise a Site Visit</button>
+            <button class="visit-btn" onclick="openPopup()">Organise a Site Visit</button>
             <a href="https://wa.me/919971308727" target="_blank" class="icon-btn">
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
@@ -52,6 +52,81 @@
           <!-- You can copy nav-links + buttons here for mobile -->
         </div>
       </header>
+
+
+      <!-- Trigger Button -->
+<!-- <button class="enquire-now" onclick="openPopup()">Enquire Now</button> -->
+
+<!-- Overlay -->
+<div id="popupForm" class="overlay">
+  <div class="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <div class="illustration">
+      <h2>We Promise</h2>
+      <div class="illustrate-item">
+        <img src="assets/customer-service.png" alt="">
+        <p>Instant Call Back</p>
+      </div>
+      <div class="illustrate-item">
+        <img src="assets/vehicle.png" alt="">
+        <p>Free Site Visit</p>
+      </div>
+      <div class="illustrate-item">
+        <img src="assets/money.png" alt="">
+        <p>Unmatched Price</p>
+      </div>
+    </div>
+    <div>
+      <img src="assets/logo.png" alt="Paras Buildtech" class="logo">
+      <h3>Register Here And Avail <span class="highlight">TheBest Offers!!</span></h3>
+      
+      <form action="https://formspree.io/f/mdkepnqz" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        
+        <div class="phone-field">
+          <!-- <select>
+            <option value="+91">+91</option>
+          </select> -->
+          <input type="tel" name="mobile" placeholder="Mobile No" required>
+        </div>
+        
+        <input type="email" name="email" placeholder="E-Mail Address" required>
+        
+
+        <div class="captcha-box">
+          <div>
+            <canvas id="captchaCanvas" width="200" height="40"></canvas>
+            <button class="refresh_captcha" onclick="generateCaptcha()">↻</button>
+          </div>
+          
+          <input type="text" name="captcha" id="captchaInput" placeholder="Enter Captcha">
+          <!-- <button onclick="validateCaptcha(event)">Submit</button> -->
+          <p id="captchaMessage"></p>
+        </div>
+
+        <label class="consent">
+          <input class="consent-check" name="consent" type="checkbox" required checked>
+          <p>I give my consent for the <a>privacy policy</a> to apply to the processing of the provided data. I give authority to the website owner and its representatives permission to contact me via phone, text, email, or whatsapp with its offer and products. This agreement takes precedenceover any DNC/NDNC registration.</p>
+        </label>
+
+        <button class="register-btn" type="submit">Pre-Register Now</button>
+      </form>
+    
+    <!-- <div class="form-icons" style="justify-content: center; gap:20px;">
+      <a href="tel:+919999434837" title="Call">
+        <ion-icon name="call-outline"></ion-icon>
+      </a>
+      <a href="https://wa.me/919971308727" target="_blank" title="WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+      <a href="https://maps.app.goo.gl/dKYANexBuecaZx6q9" target="_blank" title="Location">
+        <ion-icon name="location-outline"></ion-icon>
+      </a>
+    </div> -->
+  </div>
+  </div>
+</div>
+
       
 
 
@@ -62,12 +137,19 @@
       <button id="toggleFormBtn">×</button>
     </div>
   
-    <form action="https://formspree.io/f/myzenqop" method="POST">
+    <form action="https://formspree.io/f/mdkepnqz" method="POST">
       <input type="text" name="name" placeholder="Name" required />
       <input type="tel" name="mobile" placeholder="Mobile No" required />
       <input type="email" name="email" placeholder="E-Mail Address" required />
   
       <!-- <div class="captcha-placeholder">[reCAPTCHA here]</div> -->
+      <div class="captcha-box">
+        <div>
+          <canvas id="stickyCaptchaCanvas" width="200" height="40"></canvas>
+          <button type="button" class="refresh_captcha" onclick="generateStickyCaptcha()">↻</button>
+        </div>
+        <input type="text" name="captcha" id="stickyCaptchaInput" placeholder="Enter Captcha" />
+      </div>
   
       <button type="submit" class="submit-btn">Pre-Register Now</button>
   
@@ -78,16 +160,16 @@
 
       <!-- Add this just before closing </div> of .sticky-form -->
         <div class="form-icons">
-            <a href="tel:+911234567890" title="Call">
+            <a href="tel:+919999434837" title="Call">
               <ion-icon name="call-outline"></ion-icon>
             </a>
-            <a href="https://wa.me/911234567890" target="_blank" title="WhatsApp">
+            <a href="https://wa.me/919971308727" target="_blank" title="WhatsApp">
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
-            <a href="https://maps.google.com?q=your+location" target="_blank" title="Location">
+            <a href="https://maps.app.goo.gl/dKYANexBuecaZx6q9" target="_blank" title="Location">
               <ion-icon name="location-outline"></ion-icon>
             </a>
-            <a href="your-brochure.pdf" download title="Download Brochure">
+            <a href="#" onclick="openPopup()" title="Download Brochure">
               <ion-icon name="cloud-download-outline"></ion-icon>
             </a>
           </div>
@@ -124,9 +206,8 @@
         </div>
       
         <div class="offers-box">
-          <h4>Offers</h4>
-          <p>Pay 50% Now And Get Assured Returns Of 12% From Day 1</p>
-          <p><strong>Gold Coin &nbsp;&nbsp; Iphone 16 &nbsp;&nbsp; Iphone 16 Pro</strong></p>
+          <!-- <h4>Offers</h4> -->
+          <h4>Paras Group Presents 30 Acres Residential Living Plotted Township In Meerut</h4>
         </div>
       </div>
 
@@ -161,7 +242,7 @@
         Every individual dreams of owning land and constructing a home that reflects their personality and lifestyle. With Paras Plots in Meerut, you get the opportunity to turn your vision into reality in a well-developed, serene, and nature-friendly environment.
 Whether you are looking for residential plots in Meerut for immediate construction or as an investment for future gains, Paras Meerut provides the perfect solution with unmatched quality and infrastructure. Don’t miss out on this golden opportunity to own a piece of premium real estate in Meerut. Contact us today to explore the best options available
       </p>
-      <a href="brochure.pdf" download class="brochure-btn">
+      <a href="#" onclick="openPopup()" class="brochure-btn">
         <ion-icon name="download-outline"></ion-icon> Download Brochure
       </a>
     </div>
@@ -287,8 +368,8 @@ Whether you are looking for residential plots in Meerut for immediate constructi
   <section id="virtual-tour" class="virtual-tour-section">
     <h2 class="section-title">Virtual Tour</h2>
     <div class="video-wrapper">
-      <img src="assets/banner1.webp" alt="Virtual Site Image" class="video-thumb">
-      <div class="play-btn" onclick="openVideo()">
+      <img src="assets/g7.jpg" alt="Virtual Site Image" class="video-thumb">
+      <div class="play-btn" onclick="openPopup()">
         <ion-icon name="play"></ion-icon>
       </div>
       <p class="video-caption">At NH-84, Meerut.</p>
@@ -305,7 +386,7 @@ Whether you are looking for residential plots in Meerut for immediate constructi
   
 <!-- Footer Section -->
 <footer class="site-footer">
-    <p>©2024 <strong>Paras Buildtech</strong></p>
+    <p>©2025 <strong>Paras Buildtech</strong></p>
     <p>Paras Buildtech Promoted by Authorised Affiliate Channel Sales Partner.</p>
     <p><strong>Project RERA No - UPRERAPRJ240109/03/2025.</strong></p>
     <p>
