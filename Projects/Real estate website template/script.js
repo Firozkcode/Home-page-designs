@@ -97,6 +97,7 @@ hamburger.addEventListener('click', () => {
   const popup = document.getElementById('imagePopup');
   const popupImg = document.querySelector('.popup-img');
   const closeBtn = document.querySelector('.close-btn');
+  const gCloseBtn = document.querySelector('.galary-close-btn');
   
   galleryImages.forEach(img => {
     img.addEventListener('click', () => {
@@ -105,6 +106,9 @@ hamburger.addEventListener('click', () => {
     });
   });
   
+  gCloseBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
   closeBtn.addEventListener('click', () => {
     popup.style.display = 'none';
   });
