@@ -9,6 +9,10 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- icons used are  ion-icons and flaticons -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -53,10 +57,6 @@
         </div>
       </header>
 
-
-      <!-- Trigger Button -->
-<!-- <button class="enquire-now" onclick="openPopup()">Enquire Now</button> -->
-
 <!-- Overlay -->
 <div id="popupForm" class="overlay">
   <div class="popup">
@@ -80,17 +80,17 @@
       <img src="assets/logo.png" alt="Paras Buildtech" class="logo">
       <h3>Register Here And Avail <span class="highlight">TheBest Offers!!</span></h3>
       
-      <form action="https://formspree.io/f/myzenqop" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
+      <form action="https://formspree.io/f/mdkepnqz" method="POST">
+        <input type="text" name="name" id="nameInput" placeholder="Name" required>
         
         <div class="phone-field">
           <!-- <select>
             <option value="+91">+91</option>
           </select> -->
-          <input type="tel" name="mobile" placeholder="Mobile No" required>
+          <input type="tel" name="mobile" id="mobileInput" placeholder="Mobile No" required>
         </div>
         
-        <input type="email" name="email" placeholder="E-Mail Address" required>
+        <input type="email" name="email" id="emailInput" placeholder="E-Mail Address" required>
         
 
         <div class="captcha-box">
@@ -100,7 +100,6 @@
           </div>
           
           <input type="text" name="captcha" id="captchaInput" placeholder="Enter Captcha">
-          <!-- <button onclick="validateCaptcha(event)">Submit</button> -->
           <p id="captchaMessage"></p>
         </div>
 
@@ -112,17 +111,6 @@
         <button class="register-btn" type="submit">Pre-Register Now</button>
       </form>
     
-    <!-- <div class="form-icons" style="justify-content: center; gap:20px;">
-      <a href="tel:+919999434837" title="Call">
-        <ion-icon name="call-outline"></ion-icon>
-      </a>
-      <a href="https://wa.me/919971308727" target="_blank" title="WhatsApp">
-        <ion-icon name="logo-whatsapp"></ion-icon>
-      </a>
-      <a href="https://maps.app.goo.gl/dKYANexBuecaZx6q9" target="_blank" title="Location">
-        <ion-icon name="location-outline"></ion-icon>
-      </a>
-    </div> -->
   </div>
   </div>
 </div>
@@ -137,10 +125,10 @@
       <button id="toggleFormBtn">×</button>
     </div>
   
-    <form action="https://formspree.io/f/myzenqop" method="POST">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="tel" name="mobile" placeholder="Mobile No" required />
-      <input type="email" name="email" placeholder="E-Mail Address" required />
+    <form action="https://formspree.io/f/mdkepnqz" method="POST">
+      <input type="text" name="name" id="stickyName" placeholder="Name" required />
+      <input type="tel" name="mobile" id="stickyMobile" placeholder="Mobile No" required />
+      <input type="email" name="email" id="stickyEmail" placeholder="E-Mail Address" required />
   
       <!-- <div class="captcha-placeholder">[reCAPTCHA here]</div> -->
       <div class="captcha-box">
@@ -183,7 +171,7 @@
   <!-- Hero section -->
   <section class="hero-slider" id="home">
 
-    <div class="hero-info-box">
+    <div class="hero-info-box" data-aos="fade-up" data-aos-delay="200">
         <h2>Booking Open</h2>
         <h1>PARS PLOT MEERUT</h1>
         <p><ion-icon name="location-outline"></ion-icon> NH-85, Opp. Subharti University Ved Viyaspuri, Meerut</p>
@@ -236,13 +224,13 @@
   <section id="overview" class="overview-section">
     <h2 class="section-title">Overview</h2>
     <div class="overview-content">
-      <h2>Paras Buildtech</h2>
-      <h4>At NH-85, Meerut.</h4>
-      <p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Paras Buildtech</h2>
+      <h4 data-aos="fade-up" data-aos-delay="150">At NH-85, Meerut.</h4>
+      <p data-aos="fade-up" data-aos-delay="200">
         Every individual dreams of owning land and constructing a home that reflects their personality and lifestyle. With Paras Plots in Meerut, you get the opportunity to turn your vision into reality in a well-developed, serene, and nature-friendly environment.
 Whether you are looking for residential plots in Meerut for immediate construction or as an investment for future gains, Paras Meerut provides the perfect solution with unmatched quality and infrastructure. Don’t miss out on this golden opportunity to own a piece of premium real estate in Meerut. Contact us today to explore the best options available
       </p>
-      <a href="#" onclick="openPopup()" class="brochure-btn">
+      <a href="#" onclick="openPopup()" class="brochure-btn" data-aos="fade-up" data-aos-delay="300">
         <ion-icon name="download-outline"></ion-icon> Download Brochure
       </a>
     </div>
@@ -254,27 +242,27 @@ Whether you are looking for residential plots in Meerut for immediate constructi
   <section id="amenities" class="amenities-section">
     <h2 class="amenities-heading">Amenities</h2>
     <div class="amenities-container">
-      <div class="amenity-box">
+      <div class="amenity-box" data-aos="fade-up" data-aos-delay="100">
         <img src="assets/security.png" alt="Security" />
         <p>24 x 7 Security</p>
       </div>
-      <div class="amenity-box">
+      <div class="amenity-box" data-aos="fade-up" data-aos-delay="150">
         <img src="assets/clubhouse.png" alt="Clubhouse" />
         <p>Clubhouse</p>
       </div>
-      <div class="amenity-box">
+      <div class="amenity-box" data-aos="fade-up" data-aos-delay="200">
         <img src="assets/park.png" alt="Parks" />
         <p>Parks</p>
       </div>
-      <div class="amenity-box">
+      <div class="amenity-box" data-aos="fade-up" data-aos-delay="250">
         <img src="assets/road.png" alt="12-Meter_Wide_Roads" />
         <p>12-Meter Wide Roads</p>
       </div>
-      <div class="amenity-box">
+      <div class="amenity-box" data-aos="fade-up" data-aos-delay="300">
         <img src="assets/cctv.png" alt="CCTV" />
         <p>CCTV</p>
       </div>
-      <div class="amenity-box">
+      <div class="amenity-box" data-aos="fade-up" data-aos-delay="350">
         <img src="assets/parking.png" alt="Car Parking" />
         <p>Car Parking</p>
       </div>
@@ -285,7 +273,7 @@ Whether you are looking for residential plots in Meerut for immediate constructi
 <section class="highlight-section">
   <h2 class="section-title">Project Highlights</h2>
   <div class="highlight-grid">
-    <ul>
+    <ul data-aos="fade-up" data-aos-delay="100">
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> Plotted development will have an astounding demand and will be good for devotees and end-users.</li>
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> Residential Plotted Development</li>
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> A Centrally-located Retail Plaza & Town Square</li>
@@ -297,7 +285,7 @@ Whether you are looking for residential plots in Meerut for immediate constructi
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> LED Street Lights in Common Areas</li>
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> Underground Water Tank for Water Storage of Parcel</li>
     </ul>
-    <ul>
+    <ul data-aos="fade-up" data-aos-delay="200">
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> Garden Hydrant irrigation system for green area</li>
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> FTTH Provision</li>
       <li><ion-icon name="shield-checkmark-outline"></ion-icon> Flexibility to construct up to 4 Floors</li>
@@ -313,19 +301,76 @@ Whether you are looking for residential plots in Meerut for immediate constructi
   </div>
 </section>
 
+<!-- Pricing Section -->
+
+<section class="price-cards-section">
+  <h2 class="section-title"><span>Price</span></h2>
+
+  <div class="main-card-container" >
+
+    <div class="card-container">
+
+          <!-- Card 1 -->
+          <div class="price-card highlighted" data-aos="fade-up" data-aos-delay="200">
+              <h3>Premium Plot</h3>
+              <p class="price">₹ 2.98 Cr* Onwards</p>
+              <ul class="features">
+                  <li>Saleable Area: 271 sq.yards</li>
+                  <li>Pricing Plan: 50:25:25</li>
+              </ul>
+              <button class="card-btn" onclick="openPopup()">Request For Price Breakup</button>
+          </div>
+
+          <div class="price-img" data-aos="fade-up" data-aos-delay="200">
+              <div class="image-overlay-wrapper">
+                  <img src="assets/g1.jpg" alt="">
+                  <div class="image-overlay">
+                      <button class="overlay-btn" onclick="openPopup()">Enquire Now</button>
+                  </div>
+              </div>
+          </div>
+          
+      
+      </div>
+
+  </div>
+
+</section>
+
+
+  <!-- Plan Section -->
+
+  <section class="site-plan-section">
+    <h2 class="section-title"><span>Site & floor Plan</span></h2>
+  
+    <div class="main-card-container">
+
+        <div class="price-image" data-aos="fade-up" data-aos-delay="100">
+            <div class="image-overlay-wrapper">
+              <img src="assets/costing-details-320w.webp" alt="Costing Details" />
+              <div class="image-overlay">
+                <button class="overlay-btn" onclick="openPopup()">Enquire Now</button>
+              </div>
+            </div>
+            <button class="price-btn full-btn" onclick="openPopup()">Request Complete Costing Details</button>
+          </div>
+          
+    </div>
+
+  </section>
   
 <!-- galary section -->
   <section id="gallery" class="gallery-section">
     <h2 class="section-title">Gallery</h2>
     <div class="gallery-grid">
-      <img src="assets/g1.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g2.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g3.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g4.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g5.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g6.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g7.jpg" alt="Gallery Image" class="gallery-img" />
-      <img src="assets/g8.jpg" alt="Gallery Image" class="gallery-img" />
+      <img src="assets/g1.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="100" loading="lazy"/>
+      <img src="assets/g2.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="200" loading="lazy"/>
+      <img src="assets/g3.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="300" loading="lazy"/>
+      <img src="assets/g4.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="400" loading="lazy"/>
+      <img src="assets/g5.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="500" loading="lazy"/>
+      <img src="assets/g6.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="600" loading="lazy"/>
+      <img src="assets/g7.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="700" loading="lazy"/>
+      <img src="assets/g8.jpg" alt="Gallery Image" class="gallery-img" data-aos="fade-up" data-aos-delay="800" loading="lazy"/>
       <!-- Add more images as needed -->
     </div>
   
@@ -341,7 +386,7 @@ Whether you are looking for residential plots in Meerut for immediate constructi
 <section id="location" class="location-section">
     <h2 class="section-title">Location</h2>
     <div class="location-container">
-      <div class="map-box">
+      <div class="map-box" data-aos="fade-up" data-aos-delay="100">
         <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d111711.4735924706!2d77.57086420565408!3d28.95821239785932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390c67000aa608d9%3A0xa62e7fd24100926c!2sXM53%2B78R%2C%20Meerut%2C%20Uttar%20Pradesh%20250002!3m2!1d28.9582375!2d77.6532656!5e0!3m2!1sen!2sin!4v1743902242225!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <!-- <iframe 
           src="https://maps.app.goo.gl/Q7Sr8rxerzFLquZT7"
@@ -350,7 +395,7 @@ Whether you are looking for residential plots in Meerut for immediate constructi
           referrerpolicy="no-referrer-when-downgrade">
         </iframe> -->
       </div>
-      <div class="location-highlights">
+      <div class="location-highlights" data-aos="fade-up" data-aos-delay="200">
         <ul>
           <li><ion-icon name="location-outline"></ion-icon> Superb Connectivity to Hospitals</li>
           <li><ion-icon name="location-outline"></ion-icon>Institutional Hub</li>
@@ -367,7 +412,7 @@ Whether you are looking for residential plots in Meerut for immediate constructi
   <!-- Virtual Tour Section -->
   <section id="virtual-tour" class="virtual-tour-section">
     <h2 class="section-title">Virtual Tour</h2>
-    <div class="video-wrapper">
+    <div class="video-wrapper" data-aos="fade-up" data-aos-delay="200">
       <img src="assets/g7.jpg" alt="Virtual Site Image" class="video-thumb">
       <div class="play-btn" onclick="openPopup()">
         <ion-icon name="play"></ion-icon>
@@ -400,6 +445,12 @@ Whether you are looking for residential plots in Meerut for immediate constructi
 
 
   <script src="script.js"></script>
+
+   <!-- Add this before closing </body> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     
 </body>
 </html>
